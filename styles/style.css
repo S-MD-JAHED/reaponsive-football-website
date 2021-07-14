@@ -25,7 +25,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #2D25A0;
-    width: 1349px;
+    width: 1440px;
     height: 677px;
 }
 .header-top{
@@ -49,6 +49,9 @@ header{
     text-decoration: none;
     padding: 10px;
 }
+.header-btn span {
+    margin: 0px 8px;
+}
 .header-banner{
    
     overflow: hidden;
@@ -70,7 +73,7 @@ header{
     grid-row-gap: 45px;
 }
 .player{
-    width: 310px;
+    width: 330px;
     height: 450px;
     padding: 15px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);;
@@ -80,12 +83,10 @@ header{
 }
 /*  */
 .copa-america{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 66px;
+    grid-column-gap: 70px;
     
 }
 .copa-details{
@@ -104,9 +105,65 @@ header{
 }
 .messi-img img{
     margin-top: 165px;
-    width: 550px;
+    width: 567px;
     height: 427px;
 }
+/* -------------------
+  fifa songs section 
+  ------------------*/
+
+.Fifa-secton{
+    margin-top: 100px;
+}
+.Fifa-heading {
+    background: orange;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+.fifa-songs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 85px;
+    text-align: center;
+}
+.fifa-song{
+    width: 470px;
+    text-align: center;
+    border: 5px solid orangered;
+}
+.fifa-song h1{
+    font-size: 35px;
+    color: orangered;
+}
+/* -------------------
+  Fifa winner section 
+  --------------------*/
+  .winner-section{
+      margin-top: 120px;
+  }
+  .all-winners{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 25px;
+  }
+  .winner{
+      width: 330px;
+      border: 5px solid orangered;
+      text-align: center;
+  }
+  .winner h3{
+      font-size: 30px;
+      color: orangered;
+  }
+  .winner img{
+      width: 100%;
+  }
+
+
+
+
 /*------------------
  footer start here 
  -------------------*/
@@ -116,7 +173,7 @@ header{
  }
 .footer-item{
     text-align: center;
-    margin-top: 160px;
+    margin-top: 120px;
 }
 .footer-top img{
     width: 483px;
@@ -144,13 +201,12 @@ header{
    ----------------*/
    @media only screen and (max-width:688px) {
        .container{
-           width: 100%;
-           
+           width: 100%;   
        }
        header{
            height: 100%;
        }
-    .header-top{
+    .header-top , .copa-america , .fifa-songs ,  .all-winners{
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 50px;
     }
@@ -158,4 +214,38 @@ header{
         grid-template-columns: repeat(1, 1fr);
        
     }
+    .copa-america{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+   }
+
+   @media only screen and (min-width:688px) and (max-width:992px) {
+       
+    .container{
+           width: 100%;   
+       }
+       header{
+           width: 100%;
+           height: 100%;
+       }
+
+       .header-top{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 98px;
+    }
+    .copa-america ,.fifa-songs{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+        margin: 0px auto;
+    }
+   
+    .players-bio ,.all-winners{
+        grid-template-columns: repeat(2, 1fr);
+
+       
+    }
+    
    }
