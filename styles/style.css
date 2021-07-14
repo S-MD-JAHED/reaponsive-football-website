@@ -199,9 +199,9 @@ header{
 /* ----------------
    media quries 
    ----------------*/
-   @media only screen and (max-width:688px) {
-       .container{
-           width: 100%;   
+   @media only screen and (max-width:688px) { 
+    .container{
+           max-width: 100%;   
        }
        header{
            height: 100%;
@@ -212,14 +212,15 @@ header{
     }
     .players-bio{
         grid-template-columns: repeat(1, 1fr);
-       
     }
+    
     .copa-america{
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    
    }
 
    @media only screen and (min-width:688px) and (max-width:992px) {
@@ -242,10 +243,12 @@ header{
         margin: 0px auto;
     }
    
-    .players-bio ,.all-winners{
-        grid-template-columns: repeat(2, 1fr);
-
-       
+    .players-bio {
+        grid-template-columns: repeat(2, 1fr);  
+    }
+    .all-winners {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-row-gap: 50px; 
     }
     
    }
